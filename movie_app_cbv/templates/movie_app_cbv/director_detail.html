@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Режиссёр: {{ director.name }}</title>
+</head>
+<body>
+    <h1>Режиссёр: {{ director.name }}</h1>
+    <h2>Фильмы:</h2>
+    <ul>
+        {% for movie in director.movies.all %}
+            <li>{{ movie.title }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/movie_app_cbv/directors/">Назад к списку режиссёров</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Детали фильма</title>
+</head>
+<body>
+    <h1>{{ movie.title }}</h1>
+    <p>{{ movie.description }}</p>
+    <p>Длительность: {{ movie.duration }} минут</p>
+    <p>Режиссёр: {{ movie.director.name }}</p>
+    <h2>Отзывы:</h2>
+    <ul>
+        {% for review in movie.reviews.all %}
+            <li>{{ review.text }} ({{ review.stars }} звёзд)</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
